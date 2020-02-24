@@ -3,17 +3,17 @@
 <body>
 <form action="stage.php" method="post">
     Search the wiki: <input type="text" name="name">
-
 </form>
 <div class="w3-container">
 
 
     <?php
-    $name = $_POST["name"];
+
+    print_r($_POST);
 
     $ch = curl_init();
 
-    curl_setopt($ch, CURLOPT_URL, "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=.$name.");
+    curl_setopt($ch, CURLOPT_URL, "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=.('$_POST').");
 
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
@@ -51,8 +51,10 @@
     body{
         background-color: darkgreen;
         text-align:left;
+
     }
     .w3-container{
         background-color: white;
     }
+
 </style>

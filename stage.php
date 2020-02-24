@@ -49,10 +49,10 @@ foreach ($results as $result) {
 </html>
 <style>
     body{
-        background-color: darkcyan;
+        background-color: dodgerblue;
         text-align:left;
     }
     .w3-container{
-        background-color: darkgrey;
+        background-color: seashell;
     }
 </style>
